@@ -1,0 +1,300 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=Cp1252" />
+<script src="PKG_OC_RECOUV/report.js" type="text/javascript"></script>
+<link href="PKG_OC_RECOUV/report.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="banner">
+<table width="98%"><tr>
+<td><h2 class="banner">PKG_OC_RECOUV</h2></td>
+</tr></table></div>
+<div id="maintabs">
+<div class="currentmaintab" onclick="onSelectMainTab(this, 0)">
+<div>
+<p>Doc</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 1)">
+<div>
+<p>Details</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 2)">
+<div>
+<p>Grants</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 3)">
+<div>
+<p>References</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 4)">
+<div>
+<p>Dependencies</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 5)">
+<div>
+<p>Code</p>
+</div>
+</div>
+</div>
+<br/>
+<div id="masterreports">
+<div id="Master.0">
+<div class="currentmasterreport">
+<TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
+<TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE><HR><P> TODO enter package declarations (types, exceptions, methods etc) here </P><HR><P></P><A NAME="method_summary"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Summary</B></FONT></TD><TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#insert_document">insert_document</A></B>( id_document OUT NUMBER , nom_document IN VARCHAR2 , mime_type IN VARCHAR2 , date_document IN VARCHAR2 , reference_document IN VARCHAR2 , data_document IN BLOB , id_dossier_contentieux IN VARCHAR2 , id_element_affaire IN VARCHAR2 , nature_document IN VARCHAR2 ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#insert_dossier_contentieux">insert_dossier_contentieux</A></B>( id_dossier OUT NUMBER , date_saisie IN VARCHAR2 , nature_operateur_inspection IN VARCHAR2 , numero IN VARCHAR2 , numero_dossierds IN VARCHAR2 , id_operateur IN VARCHAR2 , id_document IN VARCHAR2 , flag_douane IN VARCHAR2 , avancement IN VARCHAR2 , login IN VARCHAR2 ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#insert_dossier_with_all_details">insert_dossier_with_all_details</A></B>( dossier_date_saisie IN VARCHAR2 , dossier_nature_operateur_inspection IN VARCHAR2 , dossier_numero IN VARCHAR2 , dossier_numero_dossierds IN VARCHAR2 , dossier_statut IN VARCHAR2 , dossier_id_operateur IN VARCHAR2 , dossier_id_document IN VARCHAR2 , pv_nom_document IN VARCHAR2 , pv_mime_type IN VARCHAR2 , pv_date_document IN VARCHAR2 , pv_reference_document IN VARCHAR2 , pv_data_document IN BLOB , pv_id_dossier_contentieux IN VARCHAR2 , element_affaire_montant IN VARCHAR2 , element_affaire_etat IN VARCHAR2 , element_affaire_motif IN VARCHAR2 , element_affaire_date_element_affaire IN VARCHAR2 , element_affaire_id_dossier_contentieux IN VARCHAR2 , notification_nom_document IN VARCHAR2 , notification_mime_type IN VARCHAR2 , notification_date_document IN VARCHAR2 , notification_reference_document IN VARCHAR2 , notification_data_document IN BLOB , notification_id_element_affaire IN VARCHAR2 , saisi_interv_nom_document IN VARCHAR2 , saisi_interv_mime_type IN VARCHAR2 , saisi_interv_date_document IN VARCHAR2 , saisi_interv_reference_document IN VARCHAR2 , saisi_interv_data_document IN BLOB , saisi_interv_id_element_affaire IN VARCHAR2 ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#insert_element_affaire">insert_element_affaire</A></B>( id_element_affaire OUT NUMBER , montant IN VARCHAR2 , etat_dossier IN VARCHAR2 , motif IN VARCHAR2 , date_element_affaire IN VARCHAR2 , id_dossier_contentieux IN VARCHAR2 , statut IN VARCHAR2 , code_agent IN VARCHAR2 , actif IN NUMBER ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE>
+<P></P><A NAME="method_detail"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Detail</B></FONT></TD></TABLE><A NAME="insert_document"></A>
+<H3>insert_document</H3><PRE>          <B>insert_document</B>( id_document OUT NUMBER , nom_document IN VARCHAR2 , mime_type IN VARCHAR2 , date_document IN VARCHAR2 , reference_document IN VARCHAR2 , data_document IN BLOB , id_dossier_contentieux IN VARCHAR2 , id_element_affaire IN VARCHAR2 , nature_document IN VARCHAR2 ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="insert_dossier_contentieux"></A>
+<H3>insert_dossier_contentieux</H3><PRE>          <B>insert_dossier_contentieux</B>( id_dossier OUT NUMBER , date_saisie IN VARCHAR2 , nature_operateur_inspection IN VARCHAR2 , numero IN VARCHAR2 , numero_dossierds IN VARCHAR2 , id_operateur IN VARCHAR2 , id_document IN VARCHAR2 , flag_douane IN VARCHAR2 , avancement IN VARCHAR2 , login IN VARCHAR2 ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="insert_dossier_with_all_details"></A>
+<H3>insert_dossier_with_all_details</H3><PRE>          <B>insert_dossier_with_all_details</B>( dossier_date_saisie IN VARCHAR2 , dossier_nature_operateur_inspection IN VARCHAR2 , dossier_numero IN VARCHAR2 , dossier_numero_dossierds IN VARCHAR2 , dossier_statut IN VARCHAR2 , dossier_id_operateur IN VARCHAR2 , dossier_id_document IN VARCHAR2 , pv_nom_document IN VARCHAR2 , pv_mime_type IN VARCHAR2 , pv_date_document IN VARCHAR2 , pv_reference_document IN VARCHAR2 , pv_data_document IN BLOB , pv_id_dossier_contentieux IN VARCHAR2 , element_affaire_montant IN VARCHAR2 , element_affaire_etat IN VARCHAR2 , element_affaire_motif IN VARCHAR2 , element_affaire_date_element_affaire IN VARCHAR2 , element_affaire_id_dossier_contentieux IN VARCHAR2 , notification_nom_document IN VARCHAR2 , notification_mime_type IN VARCHAR2 , notification_date_document IN VARCHAR2 , notification_reference_document IN VARCHAR2 , notification_data_document IN BLOB , notification_id_element_affaire IN VARCHAR2 , saisi_interv_nom_document IN VARCHAR2 , saisi_interv_mime_type IN VARCHAR2 , saisi_interv_date_document IN VARCHAR2 , saisi_interv_reference_document IN VARCHAR2 , saisi_interv_data_document IN BLOB , saisi_interv_id_element_affaire IN VARCHAR2 ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="insert_element_affaire"></A>
+<H3>insert_element_affaire</H3><PRE>          <B>insert_element_affaire</B>( id_element_affaire OUT NUMBER , montant IN VARCHAR2 , etat_dossier IN VARCHAR2 , motif IN VARCHAR2 , date_element_affaire IN VARCHAR2 , id_dossier_contentieux IN VARCHAR2 , statut IN VARCHAR2 , code_agent IN VARCHAR2 , actif IN NUMBER ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
+<TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE></div>
+</div>
+<div id="Master.1">
+<div class="masterreport">
+<table id="Table.0" cellpadding="0" cellspacing="0" summary="">
+<th>NAME</th>
+<th>VALUE</th>
+</tr>
+<tr>
+<td>OWNER</td>
+<td>SYSTEM</td>
+</tr>
+<tr>
+<td>OBJECT_NAME</td>
+<td>PKG_OC_RECOUV</td>
+</tr>
+<tr>
+<td>SUBOBJECT_NAME</td>
+<td>null</td>
+</tr>
+<tr>
+<td>OBJECT_ID</td>
+<td>77162</td>
+</tr>
+<tr>
+<td>DATA_OBJECT_ID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>OBJECT_TYPE</td>
+<td>PACKAGE</td>
+</tr>
+<tr>
+<td>CREATED</td>
+<td>26-07-2022&nbsp;14:10:32</td>
+</tr>
+<tr>
+<td>LAST_DDL_TIME</td>
+<td>17-12-2022&nbsp;17:01:40</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>2022-12-17:17:01:40</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>VALID</td>
+</tr>
+<tr>
+<td>TEMPORARY</td>
+<td>N</td>
+</tr>
+<tr>
+<td>GENERATED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>SECONDARY</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NAMESPACE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EDITION_NAME</td>
+<td>null</td>
+</tr>
+<tr>
+<td>SHARING</td>
+<td>NONE</td>
+</tr>
+<tr>
+<td>EDITIONABLE</td>
+<td>N</td>
+</tr>
+<tr>
+<td>ORACLE_MAINTAINED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>APPLICATION</td>
+<td>N</td>
+</tr>
+<tr>
+<td>DEFAULT_COLLATION</td>
+<td>USING_NLS_COMP</td>
+</tr>
+<tr>
+<td>DUPLICATED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>SHARDED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>IMPORTED_OBJECT</td>
+<td>N</td>
+</tr>
+<tr>
+<td>CREATED_APPID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>CREATED_VSNID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>MODIFIED_APPID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>MODIFIED_VSNID</td>
+<td>null</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.2">
+<div class="masterreport">
+<table id="Table.1" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>PRIVILEGE</th>
+<th>GRANTEE</th>
+<th>GRANTABLE</th>
+<th>GRANTOR</th>
+<th>OBJECT_NAME</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.3">
+<div class="masterreport">
+<table id="Table.2" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>NAME</th>
+<th>OWNER</th>
+<th>TYPE</th>
+<th>OBJECT_ID</th>
+<th>STATUS</th>
+<th>TYPE_LINK</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.4">
+<div class="masterreport">
+<table id="Table.3" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>NAME</th>
+<th>OWNER</th>
+<th>TYPE</th>
+<th>OBJECT_ID</th>
+<th>STATUS</th>
+<th>TYPE_LINK</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.5">
+<div class="masterreport">
+<pre>
+PACKAGE pkg_oc_recouv AS 
+
+  /* TODO enter package declarations (types, exceptions, methods etc) here */
+    PROCEDURE insert_dossier_contentieux (
+        id_dossier                  OUT NUMBER,
+        date_saisie                 IN VARCHAR2,
+        nature_operateur_inspection IN VARCHAR2,
+        numero                      IN VARCHAR2,
+        numero_dossierds            IN VARCHAR2,
+        id_operateur                IN VARCHAR2,
+        id_document                 IN VARCHAR2,
+        flag_douane                 IN VARCHAR2,
+        avancement                  IN VARCHAR2,
+        login                       IN VARCHAR2
+    );
+
+    PROCEDURE insert_document (
+        id_document            OUT NUMBER,
+        nom_document           IN VARCHAR2,
+        mime_type              IN VARCHAR2,
+        date_document          IN VARCHAR2,
+        reference_document     IN VARCHAR2,
+        data_document          IN BLOB,
+        id_dossier_contentieux IN VARCHAR2,
+        id_element_affaire     IN VARCHAR2,
+        nature_document        IN VARCHAR2
+    );
+
+    PROCEDURE insert_element_affaire (
+        id_element_affaire     OUT NUMBER,
+        montant                IN VARCHAR2,
+        etat_dossier           IN VARCHAR2,
+        motif                  IN VARCHAR2,
+        date_element_affaire   IN VARCHAR2,
+        id_dossier_contentieux IN VARCHAR2,
+        statut                 IN VARCHAR2,
+        code_agent             IN VARCHAR2,
+        actif                  IN NUMBER
+    );
+
+    PROCEDURE insert_dossier_with_all_details (
+        dossier_date_saisie                    IN VARCHAR2,
+        dossier_nature_operateur_inspection    IN VARCHAR2,
+        dossier_numero                         IN VARCHAR2,
+        dossier_numero_dossierds               IN VARCHAR2,
+        dossier_statut                         IN VARCHAR2,
+        dossier_id_operateur                   IN VARCHAR2,
+        dossier_id_document                    IN VARCHAR2,
+        pv_nom_document                        IN VARCHAR2,
+        pv_mime_type                           IN VARCHAR2,
+        pv_date_document                       IN VARCHAR2,
+        pv_reference_document                  IN VARCHAR2,
+        pv_data_document                       IN BLOB,
+        pv_id_dossier_contentieux              IN VARCHAR2,
+        element_affaire_montant                IN VARCHAR2,
+        element_affaire_etat                   IN VARCHAR2,
+        element_affaire_motif                  IN VARCHAR2,
+        element_affaire_date_element_affaire   IN VARCHAR2,
+        element_affaire_id_dossier_contentieux IN VARCHAR2,
+        notification_nom_document              IN VARCHAR2,
+        notification_mime_type                 IN VARCHAR2,
+        notification_date_document             IN VARCHAR2,
+        notification_reference_document        IN VARCHAR2,
+        notification_data_document             IN BLOB,
+        notification_id_element_affaire        IN VARCHAR2,
+        saisi_interv_nom_document              IN VARCHAR2,
+        saisi_interv_mime_type                 IN VARCHAR2,
+        saisi_interv_date_document             IN VARCHAR2,
+        saisi_interv_reference_document        IN VARCHAR2,
+        saisi_interv_data_document             IN BLOB,
+        saisi_interv_id_element_affaire        IN VARCHAR2
+    );
+
+END pkg_oc_recouv;</pre>
+</div>
+</div>
+</div>
+</body>
+</html>
